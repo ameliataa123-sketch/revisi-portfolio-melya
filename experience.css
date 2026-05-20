@@ -1,0 +1,152 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#050505;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND ANIMATION */
+body::before{
+  content:'';
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    45deg,
+    #0d6efd,
+    #00ffe1,
+    #8a2be2,
+    #0d6efd
+  );
+
+  background-size:400% 400%;
+  animation:gradient 10s ease infinite;
+  opacity:0.15;
+  z-index:-1;
+}
+
+@keyframes gradient{
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+}
+
+/* NAVBAR */
+.navbar{
+  background:#111;
+  padding:15px;
+  box-shadow:0 0 15px rgba(0,255,255,0.2);
+}
+
+.navbar-brand{
+  color:white !important;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* SECTION */
+.experience-section{
+  padding:120px 0 80px;
+}
+
+#about{
+  padding-top:140px;
+}
+
+#about .container{
+  max-width:1400px;
+}
+
+#about .card-custom{
+  width:100%;
+  padding:40px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:45px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-shadow:0 0 20px cyan;
+}
+
+/* CARD */
+#about .card-custom{
+  background:#111;
+  border:1px solid rgba(0,255,255,0.2);
+  border-radius:20px;
+  transition:0.5s;
+  box-shadow:0 0 15px rgba(0,255,255,0.1);
+}
+
+#about .card-custom:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px cyan;
+}
+
+#about h3{
+  font-weight:bold;
+  color:#00ffff;
+  text-shadow:0 0 10px cyan;
+}
+
+#about p{
+  line-height:1.9;
+  text-align:justify;
+  color:#ddd;
+  margin-bottom:18px;
+}
+
+#about .hero-img{
+  width:220px;
+  border-radius:20px;
+  border:4px solid cyan;
+  box-shadow:0 0 25px cyan;
+  transition:0.5s;
+}
+
+#about .hero-img:hover{
+  transform:scale(1.05);
+}
+
+/* BUTTON */
+.btn-custom{
+  background:linear-gradient(45deg,#00ffff,#0d6efd);
+  border:none;
+  color:white;
+  padding:12px 28px;
+  border-radius:12px;
+  text-decoration:none;
+  transition:0.4s;
+  display:inline-block;
+}
+
+.btn-custom:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px cyan;
+  color:white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .title{
+    font-size:32px;
+  }
+
+}
